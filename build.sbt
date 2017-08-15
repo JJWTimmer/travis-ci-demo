@@ -9,6 +9,8 @@ lazy val ci =
     .settings(settings)
     .settings(
       libraryDependencies ++= Seq(
+        library.redisClient,
+        library.configLib,
         library.scalaCheck % Test,
         library.scalaTest  % Test
       )
@@ -20,12 +22,10 @@ lazy val ci =
 
 lazy val library =
   new {
-    object Version {
-      val scalaCheck = "1.13.5"
-      val scalaTest  = "3.0.3"
-    }
-    val scalaCheck = "org.scalacheck" %% "scalacheck" % Version.scalaCheck
-    val scalaTest  = "org.scalatest"  %% "scalatest"  % Version.scalaTest
+    val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.13.5"
+    val scalaTest  = "org.scalatest"  %% "scalatest"  % "3.0.3"
+    val redisClient = "net.debasishg" %% "redisclient" % "3.4"
+    val configLib = "com.typesafe" % "config" % "1.3.1"
   }
 
 // *****************************************************************************
