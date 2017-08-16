@@ -1,0 +1,15 @@
+language: scala
+scala:
+   - 2.12.3
+
+services:
+  - redis-server
+
+cache:
+  directories:
+    - $HOME/.sbt
+    - $HOME/.ivy2/cache
+
+
+# no need to script: default command for scala is
+# sbt ++$TRAVIS_SCALA_VERSION test
