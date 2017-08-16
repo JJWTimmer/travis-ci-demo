@@ -5,3 +5,6 @@ Don't ask me why a calculator needs Redis... Ok you can... I couldn't think of s
 By the way, this repo was created with the SBT fresh plugin, but I modified it already quite a bit.
 
 - Jasper Timmer
+
+### Travis CI modifications
+Added `.travis.yml`

@@ -10,6 +10,5 @@ cache:
     - $HOME/.sbt
     - $HOME/.ivy2/cache
 
-
 # no need to script: default command for scala is
 # sbt ++$TRAVIS_SCALA_VERSION test
